@@ -33,6 +33,11 @@ android {
 }
 
 dependencies {
+    // Retrofit2
+    def retrofit2_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+
 
     //Add ViewModel
     def lifecycle_version = "2.6.1"
