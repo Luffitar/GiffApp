@@ -6,23 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".app.presentation.MainActivity">
 
-    <TextView
-        android:id="@+id/textViewGiphy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/giphy"
-        android:textSize="26sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewGiphy"
+    <fragment
+        android:id="@+id/fragment_giphy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGiphy" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph = "@navigation/nav_graph"
+        android:name="androidx.navigation.fragment.NavHostFragment"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
